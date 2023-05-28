@@ -1,8 +1,14 @@
+
+
+
+
 body {
-  font-family: "Muli", sans-serif;
+  font-family: sans-serif;
   font-weight: 300;
-  background-color: #e2e8f0;
-  padding: 40px;
+   background: rgb(3,2,24);
+   background: linear-gradient(90deg, rgba(3,2,24,0.9430365896358543) 68%, rgba(57,12,153,1) 100%);
+   overscroll-behavior: none;
+   align-items: center;
 }
 
 label {
@@ -11,7 +17,8 @@ label {
   letter-spacing: 0.05rem;
   font-size: .8em;
   font-weight: 400;
-  color: #222;
+  color: gray;
+  margin-bottom: 1px;
 }
 
 .app {
@@ -24,7 +31,7 @@ label {
 
 .container {
   flex-grow: 1;
-  margin: 0 20px;
+  margin: 12% 20px;
   background-color: #fff;
   border: 1px solid #cbd5e0;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -41,44 +48,132 @@ label {
 }
 
 input {
-  padding: 10px 0;
-  border-radius: 0.125rem;
+  padding: 10px ;
+  border-radius: 0.2rem;
   border: 1px solid rgb(226, 232, 240);
-  background-color: #fdfdfe;
+  background-color: #fdfdfe90;
   padding-inline-start: 0.75rem;
   font-size: 0.875rem;
 }
 
+// .button {
+//   background-color: black;
+//   border-radius: 0.125rem;
+//   padding: 10px 20px;
+//   color: white;
+//   display: inline-flex;
+
+//   text-transform: uppercase;
+//   letter-spacing: 1px;
+//   font-weight: 400;
+//   font-size: .9em;
+//   &:hover {
+//     cursor: pointer;
+//     background-color: gray;
+// }}
+
+
+
+/* CSS */
 .button {
-  background-color: #319795;
-  border-radius: 0.125rem;
-  padding: 10px 20px;
+  align-items: center;
+  background-color: black;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
   color: white;
+  cursor: pointer;
   display: inline-flex;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 400;
-  font-size: .9em;
-  &:hover {
-    cursor: pointer;
-  }
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
 }
+
+.button:hover,
+.button:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color:gray;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.778);
+  transform: translateY(0);
+}
+
+
+
 
 .wallet {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
   .balance {
-    text-transform: uppercase;
     letter-spacing: 1px;
+    padding: 2px;
     font-weight: 400;
+    border-radius: 0.2rem;
     font-size: .9em;
     display: inline-flex;
-    margin-top: 10px;
+    justify-content: center;
+    border: 1px solid rgb(226, 232, 240);
+    margin-top: 18px;
     padding: 0.75rem;
-    background-color: #f4f6f8;
+    background-color: #f4f6f84e;
+    height: 22px;
+    color: gray;
+    text-align: center;
+    vertical-align: middle;
   }
+
+  .address {
+    letter-spacing: 1px;
+    padding: 10px;
+    font-weight: 400;
+    border-radius: 0.2rem;
+    font-size: .9em;
+    display: inline-flex;
+    border: 1px solid rgb(226, 232, 240);
+    margin-top: 28px;
+    padding: 0.75rem;
+    background-color: #f4f6f84e;
+    justify-content: center;
+    height: 10px;
+    color: gray;
+
+  }
+
 }
+
+
+// padding: 10px ;
+// border-radius: 0.2rem;
+// border: 1px solid rgb(226, 232, 240);
+// background-color: #fdfdfe90;
+// padding-inline-start: 0.75rem;
+// font-size: 0.875rem;
 
 .transfer {
   display: flex;
